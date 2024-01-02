@@ -9,9 +9,9 @@ resource "aws_vpc" "my-vpc-1"{
 resource "aws_subnet" "my-subnet"{
     vpc_id=aws_vpc.my-vpc-1.id
     map_public_ip_on_launch=true
-    cidr_block=var.subnet-cidr
+    cidr_block=var.subnet-cidr[count.index]
     count=length(var.subnet-cidr)
-    avaliblity_zone=data.avaliable
+    avaliblity_zone=data.avaliable.names[count.index]
 }
 
 #Internet-Gateway
