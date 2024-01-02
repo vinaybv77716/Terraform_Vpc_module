@@ -1,3 +1,3 @@
-data "aws_avalaablity_zone" "avaliable"{
+data "aws_avaliblity_zone" "avaliable"{
     state="avaliable"
 }
