@@ -30,6 +30,6 @@ resource "aws_route_table" "rt" {
 
 #Subnet-assocation
 resource "aws_route_table_association" "rtas" {
-subnet_id=aws_subnet.my-subnet.id
+subnet_id=aws_subnet.my-subnet[count.index].id
 route_table_id=aws_route_table.rt.id
 }
