@@ -21,7 +21,7 @@ resource "aws_internet_gateway" "igw"{
 
 #Rout-Tabel
 resource "aws_route_table" "rt" {
-    vpc_id=aws_vpc.creating-vpc.id
+    vpc_id=aws_vpc.my-vpc-1.id
     route{
         cidr_block="0.0.0.0/0"
         gateway_id=aws_internet_gateway.igw.id
@@ -29,7 +29,7 @@ resource "aws_route_table" "rt" {
 }
 
 #Subnet-assocation
-resource "aws_route_teble_assocation" "rtas" {
+resource "aws_route_table_association" "rtas" {
 subnet_id=aws_subnet.my-subnet.id
 route_table_id=aws_route_table.rt.id
 }
