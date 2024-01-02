@@ -11,7 +11,7 @@ resource "aws_subnet" "my-subnet"{
     map_public_ip_on_launch=true
     cidr_block=var.subnet-cidr[count.index]
     count=length(var.subnet-cidr)
-    avaliblity_zone=data.avaliable.names[count.index]
+      availability_zone = data.aws_availability_zones.available.names[count.index]
 }
 
 #Internet-Gateway
