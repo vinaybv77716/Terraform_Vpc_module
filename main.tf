@@ -12,4 +12,7 @@ module "ec2" {
   sg_id = module.mysg.sg_id
   subnets = module.vpc.subnet_ids
 }
-this is pru code
+
+
+this is vinays code
+
