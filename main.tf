@@ -13,4 +13,4 @@ module "ec2" {
   subnets = module.vpc.subnet_ids
 }
 
-main
+AWS_secret_access_key= kvsdlvhbdlsvhbsdkv
