@@ -13,4 +13,6 @@ module "ec2" {
   subnets = module.vpc.subnet_ids
 }
 
+
 this is vinays code
+
