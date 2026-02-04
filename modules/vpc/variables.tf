@@ -3,7 +3,19 @@ variable "vpc-cidr" {
   description = "description"
 }
 
-variable "subnet-cidr"{
-    type=list(string)
-    description="2-subnet"
+
+variable "public_subnet_cidrs" {
+  type = list(string)
+}
+
+variable "private_subnet_cidrs" {
+  type = list(string)
+}
+
+variable "public-subnet-tags" {
+  type = map(string)
+}
+
+variable "private-subnet-tags" {
+  type = map(string)
 }

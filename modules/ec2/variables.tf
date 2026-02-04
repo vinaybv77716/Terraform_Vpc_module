@@ -11,5 +11,9 @@ variable "subnets" {
 variable "ec2_names" {
     description = "EC2 names"
     type = list(string)
-    default = ["WebServer1", "WebServer2"]
+}
+
+variable "iam_instance_profile_name" {
+  description = "IAM role for ssm"
+  type = string
 }

@@ -1,0 +1,21 @@
+# Terraform cache (CRITICAL)
+.terraform/
+terraform/.terraform/
+
+# Terraform state (NEVER commit)
+*.tfstate
+*.tfstate.backup
+
+# Provider binaries (Windows)
+terraform/providers/
+terraform/**/terraform-provider-*
+*.exe
+
+# Terraform CLI config
+.terraformrc
+terraform.rc
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
