@@ -1,8 +1,8 @@
-output "alb_dns_name" {
+output "alb_dns" {
   description = "DNS name of the Application Load Balancer"
-  value       = aws_lb.web_alb.dns_name
+  value       = module.alb.alb_dns_name
 }
 output "alb_arn" {
   description = "ARN of the Application Load Balancer"
-  value       = aws_lb.web_alb.arn
+  value       = module.alb.alb_arn
 }
