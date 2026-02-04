@@ -3,5 +3,5 @@
 # }
 
 output "instance" {
-  value = aws_instance.*.id
+  value = aws_instance.web.*.id
 }

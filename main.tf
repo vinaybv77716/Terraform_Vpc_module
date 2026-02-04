@@ -14,18 +14,18 @@ module "iam" {
   source = "./modules/IAM"
 }
 module "ec2" {
-  source    = "./modules/ec2"
-  sg_id     = module.mysg.sg_id
-  subnets   = module.vpc.private_subnet_ids
-  ec2_names = var.ec2_names
+  source                    = "./modules/ec2"
+  sg_id                     = module.mysg.sg_id
+  subnets                   = module.vpc.private_subnet_ids
+  ec2_names                 = var.ec2_names
   iam_instance_profile_name = module.iam.ec2_ssm_instance_profile_name
 }
 module "alb" {
-  source = "./modules/alb"
-  vpc_id = module.vpc.vpc_id
+  source            = "./modules/alb"
+  vpc_id            = module.vpc.vpc_id
+  alb_sg_id         = module.mysg.sg_id
   public_subnet_ids = module.vpc.public_subnet_ids
-  alb_sg_id = module.mysg.sg_id
-  instance_ids = module.ec2.instance
+ instance = module.ec2.instance
 }
 
 
