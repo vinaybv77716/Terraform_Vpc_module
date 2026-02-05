@@ -6,5 +6,4 @@ variable "alb_arn" {
 variable "waf_name" {
   description = "Name for the WAF Web ACL (alphanumeric, -, _ only)"
   type        = string
-  default     = "web-alb-waf"
 }

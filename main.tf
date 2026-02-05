@@ -31,7 +31,7 @@ module "alb" {
 module "waf" {
   source = "./modules/waf"
   alb_arn = module.alb.alb_arn
-  waf_name = "web-alb-waf"
+  waf_name = var.waf_name
 }
 
 
