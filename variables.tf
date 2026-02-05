@@ -28,3 +28,8 @@ variable "instance_ids" {
   type    = list(string)
   default = []
 }
+
+variable "waf_name" {
+  description = "Name for the WAF Web ACL (alphanumeric, -, _ only)"
+  type        = string
+}

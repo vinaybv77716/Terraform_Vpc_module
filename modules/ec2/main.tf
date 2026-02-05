@@ -10,9 +10,9 @@ resource "aws_instance" "web" {
    user_data = <<-EOF
               #!/bin/bash
               set -e
-
+              
+              sleep 120
               apt-get update -y
-              apt-get install -y nginx
               sudo apt update
               sudo apt install fontconfig openjdk-21-jre -y
               java -version

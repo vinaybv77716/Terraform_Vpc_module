@@ -28,5 +28,11 @@ module "alb" {
  instance = module.ec2.instance
 }
 
+module "waf" {
+  source = "./modules/waf"
+  alb_arn = module.alb.alb_arn
+  waf_name = "web-alb-waf"
+}
+
 
 

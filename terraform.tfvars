@@ -10,3 +10,4 @@ private-subnet-tags = {
   "Owner"       = "Vinay"
 }
 ec2_names = ["AppServer1"]
+  waf_name = "web-alb-waf"
